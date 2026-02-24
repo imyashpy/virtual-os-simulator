@@ -1,5 +1,5 @@
 from process import Process
-from process_state import ProcessState #day 19 using enum
+from process_state import ProcessState 
 
 
 class ProcessManager:
@@ -22,7 +22,7 @@ class ProcessManager:
         print(f"Process {process.pid} moved to READY state")
 
     def make_waiting(self, process, scheduler):
-        process.state =  ProcessState.WAITING #changed day 19
+        process.state =  ProcessState.WAITING 
         scheduler.remove_process(process)
         print(f"Process {process.pid} moved to WAITING state")
 
@@ -38,32 +38,5 @@ class ProcessManager:
         process.state =  ProcessState.TERMINATED
         scheduler.remove_process(process)
         print(f"Process {process.pid} terminated")
-
-
-#
-# from process import Process
-#
-# class ProcessManager:
-#     def __init__(self):
-#         self.next_pid = 1
-#         self.processes = []
-#         print("Process Manager is ready")
-#
-#     def create_process(self):
-#         process = Process(self.next_pid)
-#         self.next_pid += 1
-#         self.processes.append(process)
-#         print(f"Process {process.pid} created with state {process.state}")
-#         return process
-#
-#     def make_ready(self, process, scheduler):
-#         process.state = "READY"
-#         scheduler.add_process(process)
-#         print(f"Process {process.pid} moved to READY state")
-
-
-
-
-
 
 
