@@ -6,6 +6,7 @@ class RoundRobinStrategy(SchedulingStrategy):
 
     def run(self, ready_queue):
         if not ready_queue:
+            #check if queue is empty!
             print("No READY process to run")
             return
 
